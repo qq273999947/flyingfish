@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc
+				http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+				http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+				http://www.springframework.org/schema/aop
+				http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+				http://www.springframework.org/schema/context
+				http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
+
+    <context:component-scan base-package="com.flyingfish" annotation-config="true"/>
+
+    <!--&lt;!&ndash; Bean解析器,级别高于默认解析器,寻找bean对象进行二次处理 &ndash;&gt;-->
+    <!--<bean id="beanNameViewResolver"-->
+          <!--class="org.springframework.web.servlet.view.BeanNameViewResolver">-->
+    <!--</bean>-->
+
+    <context:annotation-config/>
+
+    <!-- 默认的注解映射的支持 -->
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 容器默认的DefaultServletHandler处理 所有静态内容与无RequestMapping处理的URL-->
+    <mvc:default-servlet-handler/>
+
+</beans>

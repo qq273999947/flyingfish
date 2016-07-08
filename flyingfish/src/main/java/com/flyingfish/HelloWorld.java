@@ -16,7 +16,7 @@ public class HelloWorld {
 
     @RequestMapping("hello")
     public String printHello() {
-        return "index";
+        return "/index.html";
     }
 
 }

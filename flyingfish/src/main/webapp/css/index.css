@@ -1,0 +1,132 @@
+.g-top {
+    position: relative;
+    width: 100%;
+    min-width: 992px;
+    height: 128px;
+    cursor: default;
+    z-index: 10001;
+    color: #191d24;
+    font-size: 13px;
+}
+
+.g_main {
+    width: 100%;
+    z-index: 10004;
+    min-width: 992px;
+}
+
+.g-top .logo {
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    width: 315px;
+    height: 48px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.g-top .logo .g_logo {
+    float: left;
+    width: 110px;
+    height: 48px;
+    text-indent: -9999px;
+    background: url(../img/logo.png) 0 0 no-repeat;
+}
+
+.g-top .logo .g_slidernav {
+    float: left;
+    border: 1px solid transparent;
+    height: 30px;
+    width: 51px;
+    line-height: 30px;
+    margin-left: 14px;
+    margin-top: 8px;
+    padding-left: 7px;
+    color: #949ba1;
+    font-size: 13px;
+    text-indent: 0;
+    background: 0;
+}
+
+.g_main_c {
+    border-bottom: 1px solid #dee2e5;
+    margin: 0 auto;
+    width: 100%;
+    height: 62px;
+    clear: both;
+    position: relative;
+    padding-top: 18px;
+    text-align: center;
+}
+
+.g-top .g-search {
+    margin: 0 auto;
+    width: 565px;
+    position: relative;
+    z-index: 10000;
+    _display: inline;
+    text-align: left;
+}
+
+.g-top .g-search-box {
+    float: left;
+    width: 318px;
+    border-radius: 5px;
+}
+
+.g-top .g-search-btn {
+    float: left;
+    width: 78px;
+    height: 40px;
+    border: 2px solid #F60;
+    border-left: 0;
+    border-radius: 0 2px 2px 0;
+}
+
+.g-top .g-search-text {
+    float: left;
+    border: 2px solid #f60;
+    border-right-width: 1px;
+    padding: 0 10px;
+    width: 295px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px 0 0 2px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.g-top .g-search-submit {
+    width: 78px;
+    height: 40px;
+    line-height: 40px;
+    line-height: 36px\9;
+    border: 0;
+    background: #F60;
+    cursor: pointer;
+    font-size: 15px;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.g-top .g-search-submit .iconfont {
+    padding-right: 3px;
+    position: relative;
+    top: -2px;
+    top: 0\9;
+    font-size: 20px;
+}
+
+.iconfont {
+    content: "\e986";
+    font-family: tuiicon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    vertical-align: middle;
+    vertical-align: baseline\9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

@@ -9,12 +9,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     padding: 0;
 }
 
-.g-wrap {
+.g_wrap {
     margin-left: auto;
     margin-right: auto;
     width: 970px;
 }
-.g-top {
+.g_top {
     position: relative;
     width: 100%;
     height: 140px;
@@ -30,7 +30,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     margin:0px auto;
 }
 
-.g-top .logo {
+.g_top .logo {
     float:left;
     left: 20px;
     width: 250px;
@@ -40,7 +40,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     display: inline;
 }
 
-.g-top .logo .g_logo {
+.g_top .logo .g_logo {
     float: left;
     width: 150px;
     height: 48px;
@@ -48,7 +48,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     background: url(../img/logo.png) 0 0 no-repeat;
 }
 
-.g-top .logo .g_slidernav {
+.g_top .logo .g_slidernav {
     float: left;
     border: 1px solid transparent;
     height: 30px;
@@ -67,14 +67,14 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     border-bottom: 1px solid #dee2e5;
     margin: 0 auto;
     width: 100%;
-    height: 62px;
+    height: 60px;
     clear: both;
     position: relative;
     padding-top: 18px;
     text-align: center;
 }
 
-.g-top .g-search {
+.g_top .g_search {
     position:relative;
     left: 100px;
     margin: 0 auto;
@@ -86,13 +86,13 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     height: 48px;
 }
 
-.g-top .g-search-box {
+.g_top .g_search_box {
     float: left;
     width: 317px;
     border-radius: 5px;
 }
 
-.g-top .g-search-btn {
+.g_top .g_search_btn {
     float: left;
     width: 78px;
     height: 40px;
@@ -101,7 +101,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     border-radius: 0 2px 2px 0;
 }
 
-.g-top .g-search-text {
+.g_top .g_search_text {
     float: left;
     border: 2px solid #f60;
     border-right-width: 1px;
@@ -114,7 +114,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     font-size: 14px;
 }
 
-.g-top .g-search-submit {
+.g_top .g_search_submit {
     width: 78px;
     height: 40px;
     line-height: 40px;
@@ -127,7 +127,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     white-space: nowrap;
 }
 
-.g-top .g-search-submit .iconfont {
+.g_top .g_search_submit .iconfont {
     padding-right: 3px;
     position: relative;
     top: -2px;
@@ -163,26 +163,16 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 
 .g_nav_main {
     position: relative;
-    width: 992px;
+    width: 970px;
     margin: 0 auto;
     height: 50px;
 }
 
-.g-nav-master {
+.g_nav_master {
     float: left;
     height: 50px;
     overflow: hidden;
     font-size: 15px;
-}
-
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    -webkit-padding-start: 40px;
 }
 
 .g_nav_main li {
@@ -216,16 +206,16 @@ li {
     cursor:hand;
 }
 
-.g-container {
+.g_container {
     width: 100%;
     clear: left;
 }
 
-.page-container, .g_nav, .g-bot {
+.page_container, .g_nav, .g-bot {
     margin-top:10px;
 }
 
-.g-wrap .main {
+.g_wrap .main {
     width: 100%;
 }
 
@@ -235,7 +225,7 @@ li {
     /*margin-bottom: 20px;*/
 }
 
-.catalog_row .mod-box .hd {
+.catalog_row .mod_box .hd {
     position: relative;
     padding: 16px 0;
     height: 44px;
@@ -243,7 +233,7 @@ li {
     margin-right: 16px;
 }
 
-.catalog_row .mod-box .hd .title {
+.catalog_row .mod_box .hd .title {
     float: left;
     margin-right: 16px;
     padding: 0 15px;
@@ -256,33 +246,33 @@ li {
     border-radius: 2px;
 }
 
-.catalog_row .mod-box .hd .extend {
+.catalog_row .mod_box .hd .extend {
     float: right;
     right: 0;
 }
 
-.catalog_row .mod-box .bd {
+.catalog_row .mod_box .bd {
     width: 1002px;
     overflow: hidden;
 }
-.mod-box .bd {
+.mod_box .bd {
     position: relative;
 }
 
-.catalog_row .mod-box .bd .items {
+.catalog_row .mod_box .bd .items {
     width: 1002px;
 }
 
-.catalog_row .mod-box .bd .item {
+.catalog_row .mod_box .bd .item {
     margin: 0 28px 25px 0;
 }
-.mod-box .item {
+.mod_box .item {
     float: left;
     width: 172px;
     height: 218px;
 }
 
-.mod-box .item .p {
+.mod_box .item .p {
     z-index: 0;
     position: relative;
     width: 172px;

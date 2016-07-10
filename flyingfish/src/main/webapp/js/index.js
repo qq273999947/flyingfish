@@ -21,3 +21,16 @@ $(function () {
         }
     )
 });
+
+$(function() {
+    $(".g_nav_master").find("li").hover(
+        function() {
+            var that = this;
+            $(that).css("background", "#f60");
+        },
+        function() {
+            var that = this;
+            $(that).css("background", "#fff");
+        }
+    )
+});

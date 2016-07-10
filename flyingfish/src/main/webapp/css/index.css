@@ -33,7 +33,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 .g-top .logo {
     float:left;
     left: 20px;
-    width: 200px;
+    width: 250px;
     margin-left:auto;
     overflow: hidden;
     z-index: 10;
@@ -42,10 +42,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 
 .g-top .logo .g_logo {
     float: left;
-    width: 110px;
+    width: 150px;
     height: 48px;
     text-indent: -9999px;
-    background: url(../img/logo.bmp) 0 0 no-repeat;
+    background: url(../img/logo.png) 0 0 no-repeat;
 }
 
 .g-top .logo .g_slidernav {
@@ -230,7 +230,7 @@ li {
 }
 
 .catalog_row {
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #dee2e5;
     padding-bottom: 15px;
     /*margin-bottom: 20px;*/
 }
@@ -257,10 +257,8 @@ li {
 }
 
 .catalog_row .mod-box .hd .extend {
-    position: absolute;
+    float: right;
     right: 0;
-    top: 2px;
-    margin-top:22px;
 }
 
 .catalog_row .mod-box .bd {
@@ -276,52 +274,26 @@ li {
 }
 
 .catalog_row .mod-box .bd .item {
-    margin: 0 32px 20px 0;
+    margin: 0 28px 25px 0;
 }
 .mod-box .item {
     float: left;
-    /*margin-right: 30px;*/
-    width: 168px;
+    width: 172px;
+    height: 218px;
 }
 
 .mod-box .item .p {
-    margin: 0;
-}
-
-.p {
     z-index: 0;
     position: relative;
-    width: 128px;
-    margin-bottom: 20px;
+    width: 172px;
+    height: 218px;
     color: #909090;
 }
 
-.item .pv .p_link {
-    width: 128px;
-    height: 180px;
-}
-
-.pv .p_link {
-    width: 128px;
-    height: 182px;
-}
-.p .p_link {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 124px;
-    height: 76px;
-    background: url(../img/soku.png) no-repeat 5000px 5000px;
-}
 li {
     list-style: none;
 }
 
-.p .p_link a {
-    display: block;
-    height: 100%;
-}
 a {
     cursor: pointer;
 }
@@ -330,89 +302,40 @@ a {
     color: #06c;
 }
 
-
-.item .pv .p_thumb {
+.item .p .p_thumb {
     border: none;
     padding: 0;
-    width: 128px;
-    height: 180px;
+    width: 172px;
+    height: 218px;
 }
 
-.pv .p_thumb {
-    width: 128px;
-    height: 182px;
-    background: #fff;
-}
-
-
-/*.item .pv .p_thumb img {*/
-    /*width: 128px;*/
-    /*height: 180px;*/
-/*}*/
-
-.pv .p_thumb img {
-    /*position: static;*/
+.p .p_thumb img {
     width: 172px;
     height: 218px;
     background: #999;
 }
 
-.item .pv .p_status {
-    left: 0;
-    top: 162px;
-    width: 128px;
-}
-.pv .p_status {
-    width: 128px;
-    top: 164px;
-    left: 0px;
-}
-.p .p_status {
-    z-index: 1;
+.item .p .p_content {
     position: absolute;
-    left: 0;
-    width: 124px;
-    height: 18px;
-    top: 58px;
+    top:198px;
+    bottom:0px;
+    font-size: 14px;
+    width: 172px;
     overflow: hidden;
-    line-height: 17px;
-}
-
-.p .p_status .status {
-    color: #fff;
-    margin-left: 4px;
-    line-height: 17px;
-}
-
-.p .p_status .feature {
-    color: #fff;
-    z-index: 2;
-    position: absolute;
-    right: 4px;
-    height: 18px;
-    top: 1px;
-    overflow: hidden;
-    line-height: 17px;
-}
-
-.p .p_status .bg {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 18px;
     background: #000;
     filter: alpha(opacity=60);
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-
-.mod-box .p_title {
-    font-size: 14px;
+.item .p .p_title {
+    font-size: 15px;
     height: 20px;
     overflow: hidden;
+    margin-left:4px;
+}
+
+.item .p .p_title a {
+    color: #fff;
 }
 
 li {
@@ -420,12 +343,43 @@ li {
 }
 
 
-.catalog_row .mod-box .bd .p_desc {
-    text-align: left;
-}
-.mod-box .p_desc {
+.item .p .p_desc {
+    display:none;
     height: 20px;
+    margin-left:4px;
+}
+
+.item .p .p_status {
+    display:none;
     overflow: hidden;
+    top: 162px;
+    width: 172px;
+    margin-left:4px;
+}
+
+.p .p_status {
+    width: 128px;
+    top: 164px;
+    left: 0px;
+    z-index: 1;
+    height: 18px;
+    line-height: 17px;
+}
+
+.p .p_status .status {
+    float:left;
+    line-height: 17px;
+    width: 60px;
+}
+
+.p .p_status .feature {
+    display:none;
+    float:left;
+    z-index: 2;
+    right: 4px;
+    height: 18px;
+    top: 1px;
+    line-height: 17px;
 }
 
 .sk_footer {

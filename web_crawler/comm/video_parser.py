@@ -4,6 +4,7 @@ import requests
 import logging
 import bs4
 import time
+import traceback
 
 from comm.comm import video_field_dict, date_str
 from model.video import Video
@@ -12,13 +13,16 @@ from model.video import Video
 
 def get_videos(items_tag, video_classify):
     video_field = video_field_dict[video_classify]
-    to_file = open('midRes/' + video_field + '_' + date_str + '.txt', 'w')
+    to_file = open('midRes/' + video_field + '_' + date_str + '.txt', 'a')
     try:
         index = 1
         for item_tag in items_tag:
             logging.info('开始解析第 %d 个视频', index)
-
-            video = get_video(item_tag, video_classify)
+            try:
+                video = get_video(item_tag, video_classify)
+            except Exception:
+                logging.warning("解析第 %d 个视频异常", index)
+                return
             video.set_classify_1(video_classify)
             to_file.write(video.to_string())
             to_file.write('\n')

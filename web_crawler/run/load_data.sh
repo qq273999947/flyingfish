@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 
 mysql -uroot -p0 -h182.254.139.172 -e "

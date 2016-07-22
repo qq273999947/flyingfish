@@ -9,8 +9,6 @@ import traceback
 from comm.comm import video_field_dict, date_str
 from model.video import Video
 
-
-
 def get_videos(items_tag, video_classify):
     video_field = video_field_dict[video_classify]
     to_file = open('midRes/' + video_field + '_' + date_str + '.txt', 'a')

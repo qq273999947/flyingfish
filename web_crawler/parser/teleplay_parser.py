@@ -161,7 +161,7 @@ class TeleplayParser(object):
             self.__parse_intro(video, intro_tag)
 
     def __parse_classify_2(self, video, soup):
-        classify_2 = soup.span.text
+        classify_2 = soup.span.text.replace('/', '|')
         video.set_classify_2(classify_2)
 
     def __parse_classify_3(self, video, soup):
@@ -181,7 +181,12 @@ class TeleplayParser(object):
     def __parse_intro(self, video, soup):
         if soup is not None and soup.label is not None:
             soup.label.extract()
-        video.set_intro(soup.text.replace('\r', '').replace('\n', '').replace('\t', ''))
+            video.set_intro(soup.text
+                            .replace(' ', '')
+                            .replace('\r', '')
+                            .replace('\n', '')
+                            .replace('\t', '')
+                            )
 
     def __get_all_suffixes(self):
         url_helper = TeleplayUrlHelper(self.__video_url)
@@ -199,9 +204,12 @@ class TeleplayParser(object):
 
     def __parse_start_time(self, video, soup):
         start_time_text = soup.span.text.replace(' ', '')
-        year_pattern = re.compile('([0-9]+)$')
+        year_pattern = re.compile('([0-9]+)')
+        year_month_pattern = re.compile('([0-9]+)-([0-9]+)')
         if year_pattern.match(start_time_text) is not None:
             start_time_text += '-00-00'
+        elif year_month_pattern.match(start_time_text) is not None:
+            start_time_text += '-00'
         video.set_start_time(start_time_text)
 
 class TeleplayUrlHelper(object):

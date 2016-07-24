@@ -101,7 +101,7 @@ class TeleplayParser(object):
         # 获取播放源
         self.__parse_source_and_link(video, item_tag)
         # 获取缩略图
-        self.__parse_picture_url(video, item_tag)\
+        self.__parse_picture_url(video, item_tag)
         # # 获取剧集标签
         self.__parse_drama_num(video, item_tag)
 

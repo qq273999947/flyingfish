@@ -84,7 +84,7 @@ class AnimeParser(object):
         self.__parse_title(video, item_tag)
         logging.info('视频名称: %s', video.get_name())
 
-        if video.get_name in self.__video_set:
+        if video.get_name() in self.__video_set:
             logging.info('视频 %s 已经存在', video.get_name())
             return None
         else:

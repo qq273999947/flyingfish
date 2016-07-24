@@ -155,7 +155,7 @@ class TeleplayParser(object):
         drama_list_tag = drama_list_tag.find_all('li')
         if len(drama_list_tag) > 0:
             drama_num_tag = drama_list_tag[len(drama_list_tag) - 1]
-            if drama_list_tag.a is not None and drama_list_tag.a.text is not None:
+            if drama_num_tag.a is not None and drama_num_tag.a.text is not None:
                 drama_num = int(drama_num_tag.a.text)
                 video.set_drama_num(drama_num)
 

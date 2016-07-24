@@ -15,6 +15,7 @@ class TeleplayParser(object):
     __video_field = teleplay_field
     __video_url = teleplay_url
     __video_classify = '电视剧'
+    __video_set = set()
 
     def __init__(self):
         pass
@@ -65,9 +66,14 @@ class TeleplayParser(object):
             logging.info('开始解析第 %d 个视频', index)
             try:
                 video = self.__get_video(item_tag)
+                if video is None:
+                    continue
             except Exception as e:
                 logging.warning("解析第 %d 个视频异常", index)
                 logging.exception("exception")
+                # 将其从video set中移除
+                if video is not None and video.get_name() is not None:
+                    self.__video_set.remove(video.get_name())
                 continue
             to_file.write(video.to_string())
             to_file.write('\n')
@@ -82,6 +88,13 @@ class TeleplayParser(object):
         # 获取title标签
         self.__parse_title(video, item_tag)
         logging.info('视频名称: %s', video.get_name())
+
+        if video.get_name in self.__video_set:
+            logging.info('视频 %s 已经存在', video.get_name())
+            return None
+        else:
+            self.__video_set.add(video.get_name())
+
         # 获取评分标签
         self.__parse_score(video, item_tag)
         # 获取播放源

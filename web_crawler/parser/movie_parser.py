@@ -65,6 +65,7 @@ class MovieParser(object):
         index = 1
         for item_tag in video_items_tag:
             logging.info('开始解析第 %d 个视频', index)
+            video = None
             try:
                 video = self.__get_video(item_tag)
                 if video is None:

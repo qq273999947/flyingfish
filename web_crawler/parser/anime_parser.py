@@ -58,6 +58,7 @@ class AnimeParser(object):
         index = 1
         for item_tag in video_items_tag:
             logging.info('开始解析第 %d 个视频', index)
+            video = None
             try:
                 video = self.__get_video(item_tag)
                 if video == None:
@@ -144,8 +145,9 @@ class AnimeParser(object):
         drama_list_tag = soup.find('ul', 'linkpanel').find_all('li')
         if len(drama_list_tag) > 0:
             drama_num_tag = drama_list_tag[len(drama_list_tag) - 1]
-            drama_num = int(drama_num_tag.a.text)
-            video.set_drama_num(drama_num)
+            if drama_list_tag.a is not None and drama_list_tag.a.text is not None:
+                drama_num = int(drama_num_tag.a.text)
+                video.set_drama_num(drama_num)
 
     def __parse_detail(self, video, soup):
         detail_tag = soup.find(class_='detail')
